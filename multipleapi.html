@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+	let finalArrayInner = [];
+	async function callAPI(){
+		await fetch('http://dummyjson.com/products')
+            .then(res => res.json())
+            .then(data => showData(data.products));
+	}
+
+	function showData(productdata) {
+			finalRes = '<ul>';
+			copy = [];
+			/*productdata.forEach(item => {
+			  copy.push('<li>' + item.title + '</li> ' );
+			})*/
+			productdata.forEach(myFunction);
+			finalRes += copy.join("");
+			finalRes += '</ul>';
+			document.getElementById('productsresult').innerHTML = finalRes;
+	}
+	function myFunction(item, index, arr) {
+	   copy[index] = '<li>' +  item.title  + '</li>';
+	}
+	callAPI()
+    </script>
+  </head>
+  <body>
+	<div id="productsresult"></div>
+  
+  </body>
+  
+</html>
