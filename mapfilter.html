@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+      const data = [
+        { id: 1, title: 'first'},
+        { id: 2, title: 'second' },
+        { id: 3, title: 'third' },
+        { id: 4, title: 'fourth' },
+      ];
+
+      const UpperData = data.map( (ele) =>  ele.title.toUpperCase() );
+      console.log(UpperData);
+
+      const FilterData = data.filter(ele => ele.id % 2 === 0);
+       console.log(FilterData);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

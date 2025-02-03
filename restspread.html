@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // Spread operator
+    //  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    //  const copyFruits = [ 'first' , ...fruits, 'last'];
+    //  console.log(copyFruits);
+    //   console.log(...fruits);
+
+    // rest operator
+    const getSize =  (a, b, ...args) => {
+        console.log(a, b);
+        console.log(args);
+    }
+    console.log(getSize(10,20,30,4244,42254,52525));
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
